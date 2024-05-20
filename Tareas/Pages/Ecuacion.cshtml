@@ -1,0 +1,47 @@
+﻿@page
+@model Tareas.Pages.EcuacionModel
+@{
+    ViewData["Title"] = "Calcular Binomio";
+}
+
+<h2>Calcular Binomio</h2>
+
+<form method="post">
+    <div>
+        <label asp-for="A"></label>
+        <input asp-for="A" />
+        <span asp-validation-for="A"></span>
+    </div>
+    <div>
+        <label asp-for="B"></label>
+        <input asp-for="B" />
+        <span asp-validation-for="B"></span>
+    </div>
+    <div>
+        <label asp-for="X"></label>
+        <input asp-for="X" />
+        <span asp-validation-for="X"></span>
+    </div>
+    <div>
+        <label asp-for="Y"></label>
+        <input asp-for="Y" />
+        <span asp-validation-for="Y"></span>
+    </div>
+    <div>
+        <label asp-for="N"></label>
+        <input asp-for="N" />
+        <span asp-validation-for="N"></span>
+    </div>
+    <div>
+        <button type="submit">Calcular</button>
+    </div>
+</form>
+
+@if (Model.Resultado != 0)
+{
+    <h3>Resultado: @Model.Resultado</h3>
+}
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

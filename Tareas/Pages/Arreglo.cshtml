@@ -1,0 +1,21 @@
+﻿@page
+@model Tareas.Pages.ArregloModel
+@{
+    ViewData["Title"] = "Estadísticas del Arreglo";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<h2>Números Generados:</h2>
+<ul>
+    @foreach (var number in Model.Numbers)
+    {
+        <li>@number</li>
+    }
+</ul>
+
+<h2>Estadísticas:</h2>
+<p>Suma: @Model.Sum</p>
+<p>Promedio: @Model.Average</p>
+<p>Moda: @string.Join(", ", Model.Mode)</p>
+<p>Mediana: @Model.Median</p>

@@ -1,0 +1,24 @@
+﻿
+@page
+@model Tareas.Pages.CaesarCipherModel
+@{
+    ViewData["Title"] = "Cifrado César";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label for="Message">Mensaje:</label>
+        <textarea id="Message" name="Message" class="form-control" rows="3" required>@Model.Message</textarea>
+    </div>
+    
+    <button type="submit" name="action" value="encode" class="btn btn-primary">Codificar</button>
+    <button type="submit" name="action" value="decode" class="btn btn-secondary">Decodificar</button>
+</form>
+
+@if (!string.IsNullOrEmpty(Model.Result))
+{
+    <h2>Resultado</h2>
+    <p>@Model.Result</p>
+}
