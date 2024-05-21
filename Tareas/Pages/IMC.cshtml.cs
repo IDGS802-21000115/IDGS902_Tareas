@@ -31,32 +31,32 @@ namespace Tareas.Pages
             if (BMI < 18)
             {
                 Classification = "Peso Bajo";
-                //RecommendationImage = "images/underweight.png";
+                RecommendationImage = "images/bajo.jfif";
             }
             else if (BMI >= 18 && BMI < 25)
             {
                 Classification = "Peso Normal";
-                //RecommendationImage = "images/normalweight.png";
+                RecommendationImage = "images/normal.jfif"; ;
             }
             else if (BMI >= 25 && BMI < 27)
             {
                 Classification = "Sobre peso";
-                //RecommendationImage = "images/overweight.png";
+                RecommendationImage = "images/alto.jfif";
             }
             else if (BMI >= 27 && BMI < 30)
             {
                 Classification = "Obesidad grado I";
-                //RecommendationImage = "images/obesity1.png";
+                RecommendationImage = "images/grado.png";
             }
             else if (BMI >= 30 && BMI < 40)
             {
                 Classification = "Obesidad grado II";
-               // RecommendationImage = "images/obesity2.png";
+                RecommendationImage = "images/grado.png";
             }
             else
             {
                 Classification = "Obesidad grado III";
-                //RecommendationImage = "images/obesity3.png";
+                RecommendationImage = "images/grado.png";
             }
         }
     }
